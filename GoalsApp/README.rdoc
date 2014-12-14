@@ -1,0 +1,1 @@
+A Rails app to track your goals.  Includes integration test suite using Capybara
