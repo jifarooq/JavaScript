@@ -6,7 +6,7 @@ Function.prototype.myBind = function (context) {
     // this == window
     var childArgs = Array.prototype.slice.call(arguments)
     return funct.apply(context, parentArgs.concat(childArgs));
-  })()
+  });
 }
 
 var Cat = function (name, age) {
@@ -15,13 +15,12 @@ var Cat = function (name, age) {
 };
 
 meow = function () {
-  console.log(this.name + " says meow!");
+  return this.name + " says meow!";
 };
 
 var cat = new Cat('Gizmo', 3);
-cat.meow();
 
 boundMeow = meow.myBind(cat);
-boundMeow();
+// console.log(boundMeow());
 
-// setTimeout(myBind(cat, cat.meow), 1000);
+setTimeout(console.log(meow.myBind(cat)()), 1000);

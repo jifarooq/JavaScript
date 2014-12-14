@@ -52,7 +52,6 @@ Game.prototype.run = function (callback) {
 };
   
 Game.prototype.startGame = function (func) {
-  
   function loopStep() {
     if (game.board.isOver()) {
       return func();
