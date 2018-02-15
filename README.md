@@ -1,4 +1,4 @@
-#Projects
+# Projects
 
 - App to track goals with Capybara integration tests
 - Rails Lite, rebuilding a slim version of Rails with controllers, routers, and views
